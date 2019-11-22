@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
+    [SerializeField] Text bestRecord;
     [SerializeField] GameObject gameoverPanel;
     [SerializeField] GameObject startLogos;
     [SerializeField] Osori osori;
@@ -28,6 +29,7 @@ public class GameManager : MonoBehaviour
         state = State.READY;
         osori.SetKinematic(true);
         gameoverPanel.SetActive(false);
+        bestRecord.text = "Best Record: " + PlayerPrefs.GetInt("Score").ToString();
     }
     public void IncreaseScore()
     {
@@ -49,6 +51,9 @@ public class GameManager : MonoBehaviour
                 if (osori.IsDead) GameOver();
                 break;
             case State.OVER:
+                Save();
+                int lastscore = PlayerPrefs.GetInt("Score");
+                bestScoreText.text = lastscore.ToString();
             
                 // if(Input.GetButtonDown("Fire1"))
                 // {
@@ -79,6 +84,18 @@ public class GameManager : MonoBehaviour
     public void OnGameRetryButtonClicked()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+    public void Save()
+    {
+        if(score>PlayerPrefs.GetInt("Score"))
+        {
+            PlayerPrefs.SetInt("Score", score);
+        }
+        else
+        {
+
+        }
+        
     }
 }
 
