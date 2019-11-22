@@ -205,6 +205,38 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 1, y: -1}
   m_UseGraphicAlpha: 1
+--- !u!1 &41797740 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6634543583438833557, guid: 1e5f2be61701a6d499809238f99e2c84,
+    type: 3}
+  m_PrefabInstance: {fileID: 6634543581973319031}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &41797742
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 41797740}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.4444444, y: 6}
+    newSize: {x: 1.625, y: 6.75}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.4444444, y: 6}
+  m_EdgeRadius: 0
 --- !u!1 &118517115
 GameObject:
   m_ObjectHideFlags: 0
@@ -763,6 +795,38 @@ MonoBehaviour:
   bestScoreText: {fileID: 1635837687}
   pipes: {fileID: 1924783751}
   flashImage: {fileID: 118517117}
+--- !u!1 &700258227 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6634543583159916857, guid: 1e5f2be61701a6d499809238f99e2c84,
+    type: 3}
+  m_PrefabInstance: {fileID: 6634543581973319031}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &700258229
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 700258227}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.4444444, y: 6}
+    newSize: {x: 1.625, y: 6.75}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.4444444, y: 6}
+  m_EdgeRadius: 0
 --- !u!1 &702751549
 GameObject:
   m_ObjectHideFlags: 0
@@ -1917,7 +1981,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1472017575
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2623,6 +2687,7 @@ GameObject:
   - component: {fileID: 1914596958}
   - component: {fileID: 1914596960}
   - component: {fileID: 1914596959}
+  - component: {fileID: 1914596961}
   m_Layer: 5
   m_Name: BestRecord
   m_TagString: Untagged
@@ -2689,6 +2754,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1914596957}
   m_CullTransparentMesh: 0
+--- !u!95 &1914596961
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1914596957}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: accf101d9bd57b141993ae2d37c5e297, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1924783751 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6634543583827842032, guid: 1e5f2be61701a6d499809238f99e2c84,
@@ -3356,5 +3440,12 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 9
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6634543583159916839, guid: 1e5f2be61701a6d499809238f99e2c84,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.2
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6634543583438833554, guid: 1e5f2be61701a6d499809238f99e2c84, type: 3}
+    - {fileID: 6634543583159916838, guid: 1e5f2be61701a6d499809238f99e2c84, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1e5f2be61701a6d499809238f99e2c84, type: 3}
