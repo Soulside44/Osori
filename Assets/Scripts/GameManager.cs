@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject startLogos;
     [SerializeField] Osori osori;
     [SerializeField] Text scoreText;
+    [SerializeField] Text totalScoreText;
+    [SerializeField] Text bestScoreText;
     [SerializeField] GameObject pipes;
     [SerializeField] FlashImage flashImage;
     int score;
@@ -31,6 +33,7 @@ public class GameManager : MonoBehaviour
     {
         score++;
         scoreText.text = "Score: " + score.ToString();
+        totalScoreText.text = score.ToString();
     }
     void Update()
     {
