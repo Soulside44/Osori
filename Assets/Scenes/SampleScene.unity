@@ -633,6 +633,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e4742c5d48e4804d8f1590cfcd867e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameoverPanel: {fileID: 346820512}
 --- !u!1 &668813519
 GameObject:
   m_ObjectHideFlags: 0
@@ -2336,7 +2337,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2011124198}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 668813521}
+        m_MethodName: OnGameRetryButtonClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2011124198
 MonoBehaviour:
   m_ObjectHideFlags: 0
