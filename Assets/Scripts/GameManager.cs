@@ -46,10 +46,11 @@ public class GameManager : MonoBehaviour
                 if (osori.IsDead) GameOver();
                 break;
             case State.OVER:
-                if(Input.GetButtonDown("Fire1"))
-                {
-                    SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-                }
+            
+                // if(Input.GetButtonDown("Fire1"))
+                // {
+                //     SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                // }
                 break;
         }
     }
@@ -71,6 +72,10 @@ public class GameManager : MonoBehaviour
         state = State.PLAY;
         osori.SetKinematic(false);
         pipes.SetActive(true);
+    }
+    public void OnGameRetryButtonClicked()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
 
