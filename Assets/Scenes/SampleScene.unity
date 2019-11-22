@@ -676,6 +676,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0f14a315fe67904eafd68a207f087d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameoverPanel: {fileID: 346820512}
+  startLogos: {fileID: 1226490644}
   osori: {fileID: 1327226154}
   scoreText: {fileID: 20969033}
   pipes: {fileID: 1924783751}
@@ -1641,7 +1643,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1472017575
 MonoBehaviour:
   m_ObjectHideFlags: 0

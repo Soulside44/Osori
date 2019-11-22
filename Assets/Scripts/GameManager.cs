@@ -5,6 +5,8 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
+    [SerializeField] GameObject gameoverPanel;
+    [SerializeField] GameObject startLogos;
     [SerializeField] Osori osori;
     [SerializeField] Text scoreText;
     [SerializeField] GameObject pipes;
@@ -19,9 +21,11 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        startLogos.SetActive(true);
         pipes.SetActive(false);
         state = State.READY;
         osori.SetKinematic(true);
+        gameoverPanel.SetActive(false);
     }
     public void IncreaseScore()
     {
@@ -61,6 +65,9 @@ public class GameManager : MonoBehaviour
     }
     void GameStart()
     {
+        scoreText.gameObject.SetActive(true);
+        scoreText.text = "Score:  ";
+        startLogos.SetActive(false);
         state = State.PLAY;
         osori.SetKinematic(false);
         pipes.SetActive(true);
